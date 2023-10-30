@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a simple example of Horizontal Scroll built with GSAP!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lenis.css">
+    <link rel="shortcut icon" href="./gsap.svg" type="image/x-icon">
+    <title>Horizontal scroll with GSAP!</title>
+</head>
+<body>
+
+    <header class="hero">
+        <div class='description'>
+            <h1>Welcome to Horizontal Scroll with GSAP! Here you can find the famous effect you can often see in Awwwards winning websites.</h1>
+            <p>Not enough? <br> I've also added some Smooth Scroll effect with Lenis!</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="panel">
+            <div>
+                <h1 class='title'>Sooo smoooooth...</h1>
+            </div>
+        </div>
+        <div class="panel">
+            <div>
+                <h1 class='title'>But how does this work?</h1>
+            </div>
+        </div>
+        <div class="panel">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+            </div>
+            <div>
+                <h1 class='title'>HTML & CSS</h1>
+                <p style="margin-top: 50px;">
+                    Start by defining the HTML structure for your page. <br> You should have a container for the content that will be horizontally scrolled, <br> and within that container, create sections (panels) that will be horizontally scrolled. 
+                </p>
+                <p>
+                    Time for some CSS, remember to add a 'hidden' overflow-x to the body and a 'flex' display to the container.
+                </p>
+            </div>
+        </div>
+        <div class='panel'>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+            </div>
+            <div>
+                <h1 class='title'>JavaScript</h1>
+                <p style="margin-top: 50px;">
+                    Register the ScrollTrigger plugin for GSAP. <br> This plugin is used to control animations based on scroll events.
+                    <br>
+                    Select all elements with the class "panel" and stores them in an array called sections.
+                    <br>
+                    Initiate a GSAP animation that targets the sections (panels) for horizontal scrolling.
+                    <br>
+                    Animate the xPercent property of the sections. <br> This property controls the horizontal position of the elements based on scroll progress.
+                    <br> By setting xPercent to a negative value, it moves the elements to the left as you scroll.
+                </p>
+            </div>
+        </div>
+        <div class='panel'>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+            </div>
+            <div>
+                <h1 class='title'>Almost there...</h1>
+                <p style="margin-top: 50px;">
+                    Specify the easing function for the animation. <br> "none" means a linear scroll, resulting in constant speed as you scroll.
+                    <br>
+                    Specify the element that triggers the animation. <br> In this case, it's the element with the class "container."
+                    <br>
+                    Pin the trigger element while the animation is active, creating the appearance of horizontal scrolling.
+                    <br>
+                    Make the animation scrub 1:1 with the scroll. <br> This means that the animation progresses at the same rate as your scrolling.
+                    <br>
+                    Specify how the animation snaps to each section.
+                    <br>
+                    Determine when the animation ends. It's set to be the total width of all sections. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h1>And that's it! Now you can add Horizontal Scroll to all your projects, as simple as that.</h1>
+
+        <div class='credits'>
+            <small>Credits: Maela Cudini</small>
+            <div>
+                <small><a href="">GitHub Repo</a></small>
+                <small><a href="">Live Version</a></small>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
