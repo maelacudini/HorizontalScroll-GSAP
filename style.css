@@ -140,5 +140,28 @@ a:hover {
   .panel {
     padding: 25px !important;
     min-height: 100vh !important;
+    flex-direction: column;
+    gap: 0px !important;
+  }
+
+  svg {
+    display: none;
+  }
+
+  .hero,
+  .footer {
+    padding: 25px !important;
+  }
+
+  .title {
+    text-decoration: none;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .credits {
+    bottom: 25px !important;
+    left: 25px !important;
+    right: 25px !important;
   }
 }
