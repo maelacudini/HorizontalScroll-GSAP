@@ -93,7 +93,7 @@ a:hover {
 }
 
 .container {
-  width: 500vw;
+  width: 400vw;
   min-height: 100vh;
   display: flex;
   flex-wrap: nowrap;
@@ -112,6 +112,12 @@ a:hover {
   gap: 50px;
 }
 
+.javascript {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
 .panel:nth-of-type(1) {
   background-color: #000000;
 }
@@ -126,10 +132,6 @@ a:hover {
 
 .panel:nth-of-type(4) {
   background-color: #2a2a2a;
-}
-
-.panel:nth-of-type(5) {
-  background-color: #3a3a3a;
 }
 
 @media screen and (max-width: 800px) {
@@ -164,5 +166,19 @@ a:hover {
     bottom: 25px !important;
     left: 25px !important;
     right: 25px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .javascript {
+    flex-direction: column;
+  }
+
+  svg {
+    display: none;
+  }
+
+  .panel {
+    gap: 0 !important;
   }
 }
