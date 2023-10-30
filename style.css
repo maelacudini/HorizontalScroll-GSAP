@@ -135,6 +135,7 @@ a:hover {
 @media screen and (max-width: 800px) {
   .container {
     display: block !important;
+    width: fit-content !important;
   }
 
   .panel {
