@@ -133,10 +133,6 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  .container {
-    display: block !important;
-  }
-
   .panel {
     padding: 25px !important;
     min-height: 100vh !important;
